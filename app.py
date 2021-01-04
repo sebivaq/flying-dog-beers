@@ -7,7 +7,6 @@ from binance.client import Client
 import pandas as pd
 import numpy as np
 import datetime
-import requests
 import plotly.graph_objs as go
 import dash
 import dash_core_components as dcc
@@ -16,11 +15,7 @@ from dash.dependencies import Input, Output
 
 ######## LIQUIDITY POOLS
 
-try:
-    client = Client(api_key, api_secret)
-except requests.exceptions.ReadTimeout:
-    print(">>Timeout")
-    pass
+client = Client(api_key, api_secret)
 
 def get_price(symbol,limit,end):
     
