@@ -206,7 +206,9 @@ PR=[]
 D=[]
             
 Price=get_price('BTCUSDT',limit=SIZE,end=0)
-            
+
+print(Price['Close'][-1])
+
 # Si el size es mayor a 1500:
             
 #Price1=get_price('BTCUSDT',limit=SIZE,end=Price.index[0]-datetime.timedelta(minutes=5))
